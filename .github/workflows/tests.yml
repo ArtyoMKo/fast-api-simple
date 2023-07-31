@@ -5,6 +5,9 @@ on: [pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      JWT_SECRET_KEY: test
+      JWT_REFRESH_SECRET_KEY: test
     strategy:
       matrix:
         python-version: ["3.9"]
